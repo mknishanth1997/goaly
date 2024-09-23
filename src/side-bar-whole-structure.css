@@ -1,0 +1,115 @@
+/* This Css file is to style the sidebar and it's placement's */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    /* border: 10px solid black; */
+    padding: 24px;
+}
+aside * h1,h2,h3,h4,h5,h5,p {
+    margin: 0;
+}
+
+.logo-section-side-bar {
+    /* border: 2px solid hotpink; */
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+.logo-section-side-bar  h3 {
+    font-size: 1.8rem;
+}
+.logo-section-side-bar  p {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.setting-icon{
+    width: 65px;
+}
+
+
+/* Filter Section */
+
+.filter-section-tasks > div {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 16px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-bottom: 16px;
+    cursor: pointer;
+    color: gray;
+}
+.filter-section-tasks img {
+    width: 30px;
+}
+.filter-section-tasks {
+    margin-bottom: 24px;
+}
+
+/* Tab Button */
+
+.tab-button {
+    display: flex;
+}
+.tab-button > button {
+    font-size: 24px;
+    flex: 1;
+    padding: 8px;
+}
+
+/* Assignment */
+
+.assignment-section div:first-child, .task-to-do-section div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.assignment-section div:first-child > img, .task-to-do-section div:first-child > img {
+    width: 30px;
+}
+
+.to-do-whole-section {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.assignment-section, .task-to-do-section{
+    flex: 1;
+    overflow-y: auto;
+}
+.assignment-section div:first-child + div > p, 
+ .task-to-do-section div:first-child + div > p{
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.sticky {
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+}
+.to-do-category { 
+    /* border: solid; */
+    margin-top: 12px;
+}
+
+/* Background image Gallery button */
+
+.bg-img-selection {
+    display: flex;
+}
+
+.bg-img-selection > button {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+

@@ -1,0 +1,54 @@
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/main-body-style.css ***!
+  \***************************************************************************/
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+aside {
+    background-color: blue;
+    grid-area: sidebar;
+}
+main {
+    grid-area: main;
+    background-color: black;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "sidebar main";
+    grid-template-columns: 250px;
+}
+
+
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/side-bar-whole-structure.css ***!
+  \************************************************************************************/
+/* This Css file is to style the sidebar and it's placement's */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    border: 10px solid black;
+    justify-content: space-evenly;
+}
+aside * h1,h2,h3,h4,h5,h5,p {
+    margin: 0;
+}
+
+.logo-section-side-bar {
+    border: 2px solid hotpink;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+}
+
+img[src="icon/setting-icon-1.svg"] {
+    width: 1000px;
+    display: none;
+  }
+
+.test {}
