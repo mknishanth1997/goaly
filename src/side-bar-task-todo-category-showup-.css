@@ -1,0 +1,51 @@
+/* Side Bar daily task and to task catergoy user input show up css styling */
+
+/* Daily Task input button */
+
+.inputBox {
+    /* display: none; */
+    position: absolute;
+    top: 40px;
+    display: flex;
+    visibility: collapse;
+}
+#userInput {
+    height: 40px;
+    /* font-size: 1.2rem; */
+}
+.inputBox > button {
+    font-size: 1.7rem;
+    background-color: gold;
+}
+.inputBox.un-hide {
+    visibility: visible;
+}
+
+
+/* Assignment Category user input Section */
+
+.inputBox1 {
+    position: absolute;
+    top: 40px;
+    display: flex;
+    visibility: collapse;
+}
+#userInput1 {
+    height: 40px;
+    /* font-size: 1.2rem; */
+}
+.inputBox1 > button {
+    font-size: 1.7rem;
+    background-color: gold;
+}
+.inputBox1.un-hide1 {
+    visibility: visible;
+}
+
+
+.to-do-modals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+}

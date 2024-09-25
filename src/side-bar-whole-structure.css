@@ -5,7 +5,9 @@ aside {
     flex-direction: column;
     /* border: 10px solid black; */
     padding: 24px;
+    background-color: rgba(128, 128, 128, .2);
 }
+
 aside * h1,h2,h3,h4,h5,h5,p {
     margin: 0;
 }
@@ -108,8 +110,21 @@ aside * h1,h2,h3,h4,h5,h5,p {
 
 .bg-img-selection > button {
     flex: 1;
-    padding: 8px;
+    padding: 12px 75px;
     border-radius: 8px;
     font-size: 1.5rem;
 }
+
+.assignment-category > p::before, .to-do-category > p::before {
+    content: "📝 ";
+}
+
+.assignment-category > p, .to-do-category > p
+{
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
 

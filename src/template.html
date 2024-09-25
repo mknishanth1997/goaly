@@ -8,7 +8,9 @@
 <body>
     <div class="container">
         <main>
-            <h1>Dfude</h1>
+            <div class="to-do-modals">
+                <h1>Nishanth</h1>
+            </div>
         </main>
         <aside>
             <section class="logo-section-side-bar">
@@ -41,30 +43,48 @@
                 <section class="assignment-section">
                     <div class="sticky">
                         <h2>Assignment</h2>
-                        <img src="icon/plus-icon-1.svg" alt="Plus Icon">
+                        <img src="icon/plus-icon-1.svg" alt="Plus Icon" class="ct-1" >
+                        <div class="inputBox1">
+                            <input type="text" id="userInput1" placeholder="Type something...">
+                            <button class="tasks-add-section">+</button> 
+                        </div>
                     </div>
                     <div class="assignment-category">
-                        <p>Content-1</p>
-                        <p>Content-2</p>
-                        <p>Content-3</p>
                     </div>
-                </section>
+                </section> 
                 <section class="task-to-do-section">
                     <div class="sticky">
                         <h2>Daily Tasks</h2>
-                        <img src="icon/plus-icon-1.svg" alt="Plus Icon">
+                        <img class="showInputBtn ct-2" src="icon/plus-icon-1.svg" alt="Plus Icon" >
+                        <div class="inputBox">
+                            <input type="text" id="userInput" placeholder="Type something...">
+                            <button class="to-do-add-section">+</button>
+                        </div>          
                     </div>
                     <div class="to-do-category">
-                        <p>to do 1</p>
-                        <p>to do 2</p>
-                        <p>to do 3</p>
+
                     </div>
                 </section>
             </div>
             <div class="bg-img-selection">
-                <button>Image</button>
+                <ul class="image-options">
+                    <li><img class="bg-images" src="img/img1.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="img/img2.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="img/img3.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="img/img4.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="img/img5.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="img/img6.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="img/img7.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="img/img8.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="img/img9.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="img/img10.webp" alt="Image 1"loading="lazy"></li>
+                </ul>
+                <button class="select-button">Theme</button>
             </div>
+            
+            
         </aside>
     </div>
+
 </body>
 </html>

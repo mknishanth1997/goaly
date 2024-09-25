@@ -8,11 +8,11 @@
 <body>
     <div class="container">
         <main>
-            <h1>Dfude</h1>
+            <h1>Dude</h1>
         </main>
         <aside>
             <section class="logo-section-side-bar">
-                <img class="test" src="4f46b93969c652931a77.svg" alt="Setting Icon">
+                <img class="setting-icon" src="4f46b93969c652931a77.svg" alt="Setting Icon">
                 <div class="logo-section-user-name-text">
                     <h3>Nishanth</h3>
                     <p>Pro Plan</p>
@@ -20,46 +20,71 @@
             </section>
             <section class="filter-section-tasks">
                 <div>
-                    <p>My Day</p>
                     <img src="3be0768510c81f12e947.svg" alt="">
+                    <p>My Day</p>
                 </div>
                 <div>
-                    <p>Next 7 Days</p>
                     <img src="ab7dafc2b01637bf43a1.png" alt="">
+                    <p>Next 7 Days</p>
                 </div>
                 <div>
-                    <p>All my tasks</p>
                     <img src="09fc37be136c3e51c4ff.svg" alt="">
+                    <p>All my tasks</p>
                 </div>
-                <button>T</button>
-                <button>A</button>
-                <button>B</button>
-            </section>
-            <section class="assignment-section">
-                <div>
-                    <h2>Assignment</h2>
-                    <img src="856f875bd713b5a7350a.svg" alt="Plus Icon">
-                </div>
-                <div class="assignment-category">
-                    <p>"Content-1"</p>
-                    <p>"Content-2"</p>
-                    <p>"Content-3"</p>
+                <div class="tab-button">
+                    <button>T</button>
+                    <button>A</button>
+                    <button>B</button>
                 </div>
             </section>
-            <section class="task-to-do-section">
-                <div>
-                    <h2>Daily Tasks</h2>
-                    <img src="856f875bd713b5a7350a.svg" alt="Plus Icon">
-                </div>
-                <div class="to-do-category">
-                    <p>to do 1</p>
-                    <p>to do 2</p>
-                    <p>to do 3</p>
-                </div>
-            </section>
-            <div class="bg-img-selection">
-                <button>Image</button>
+            <div class="to-do-whole-section">
+                <section class="assignment-section">
+                    <div class="sticky">
+                        <h2>Assignment</h2>
+                        <img src="856f875bd713b5a7350a.svg" alt="Plus Icon" class="ct-1" >
+                        <div class="inputBox1">
+                            <input type="text" id="userInput1" placeholder="Type something...">
+                            <button class="tasks-add-section">+</button> 
+                        </div>
+                    </div>
+                    <div class="assignment-category">
+                        <p>Content-1</p>
+                        <p>Content-2</p>
+                        <p>Content-3</p>
+                    </div>
+                </section> 
+                <section class="task-to-do-section">
+                    <div class="sticky">
+                        <h2>Daily Tasks</h2>
+                        <img class="showInputBtn ct-2" src="856f875bd713b5a7350a.svg" alt="Plus Icon" >
+                        <div class="inputBox">
+                            <input type="text" id="userInput" placeholder="Type something...">
+                            <button class="to-do-add-section">+</button>
+                        </div>          
+                    </div>
+                    <div class="to-do-category">
+                        <p>to do 1</p>
+                        <p>to do 2</p>
+                        <p>to do 3</p>
+                    </div>
+                </section>
             </div>
+            <div class="bg-img-selection">
+                <ul class="image-options">
+                    <li><img class="bg-images" src="9b7fe9497b631c03ec38.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="8e93a960fd558df5e88b.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="26e2752d909d570abee0.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="fa99a9bb5156a7444e7e.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="44f0b962056e0dc78df6.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="83895340e8416c91a5c2.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="9fa9acbb6df5c88f39c0.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="068a28c0bb9a49c9485f.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="92d164ce19cc9c622d38.webp"  alt="Image 1" loading="lazy"></li>
+                    <li><img class="bg-images" src="598384ce49fa8bb94439.webp" alt="Image 1"loading="lazy"></li>
+                </ul>
+                <button class="select-button">Theme</button>
+            </div>
+            
         </aside>
     </div>
 </body>

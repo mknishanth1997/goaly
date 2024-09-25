@@ -4,15 +4,16 @@
 body {
     height: 100vh;
     margin: 0;
+    background-color: beige;
+    background-size: contain;
+    background-position: center;
 }
 
 aside {
-    background-color: blue;
     grid-area: sidebar;
 }
 main {
     grid-area: main;
-    background-color: black;
 }
 
 .container {
@@ -20,8 +21,12 @@ main {
     display: grid;
     grid-template-areas: 
     "sidebar main";
-    grid-template-columns: 250px;
+    grid-template-columns: 280px;
 }
+
+
+
+
 
 
 /*!************************************************************************************!*\
@@ -32,23 +37,220 @@ main {
 aside {
     display: flex;
     flex-direction: column;
-    border: 10px solid black;
-    justify-content: space-evenly;
+    /* border: 10px solid black; */
+    padding: 24px;
+    background-color: rgba(128, 128, 128, .2);
 }
+
 aside * h1,h2,h3,h4,h5,h5,p {
     margin: 0;
 }
 
 .logo-section-side-bar {
-    border: 2px solid hotpink;
+    /* border: 2px solid hotpink; */
     display: grid;
     grid-template-columns: 50px 1fr;
     align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+.logo-section-side-bar  h3 {
+    font-size: 1.8rem;
+}
+.logo-section-side-bar  p {
+    font-size: 1.2rem;
+    font-weight: lighter;
 }
 
-img[src="icon/setting-icon-1.svg"] {
-    width: 1000px;
-    display: none;
-  }
+.setting-icon{
+    width: 65px;
+}
 
-.test {}
+
+/* Filter Section */
+
+.filter-section-tasks > div {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 16px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-bottom: 16px;
+    cursor: pointer;
+    color: gray;
+}
+.filter-section-tasks img {
+    width: 30px;
+}
+.filter-section-tasks {
+    margin-bottom: 24px;
+}
+
+/* Tab Button */
+
+.tab-button {
+    display: flex;
+}
+.tab-button > button {
+    font-size: 24px;
+    flex: 1;
+    padding: 8px;
+}
+
+/* Assignment */
+
+.assignment-section div:first-child, .task-to-do-section div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.assignment-section div:first-child > img, .task-to-do-section div:first-child > img {
+    width: 30px;
+}
+
+.to-do-whole-section {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.assignment-section, .task-to-do-section{
+    flex: 1;
+    overflow-y: auto;
+}
+.assignment-section div:first-child + div > p, 
+ .task-to-do-section div:first-child + div > p{
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.sticky {
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+}
+.to-do-category { 
+    /* border: solid; */
+    margin-top: 12px;
+}
+
+/* Background image Gallery button */
+
+.bg-img-selection {
+    display: flex;
+}
+
+.bg-img-selection > button {
+    flex: 1;
+    padding: 12px 75px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+
+.assignment-category > p::before, .to-do-category > p::before {
+    content: "📝 ";
+}
+
+
+
+/*!**********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/side-bar-theme-gallery.css ***!
+  \**********************************************************************************/
+/* This is to theme the gallery feature of the sidebar's theme button */
+
+.bg-img-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+.select-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 25px;
+}
+.image-options {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: none; 
+    position: absolute;
+    bottom: 70px;
+    border-radius: 16px;
+  }
+  .image-options.show {
+    display: block;
+    max-height: 600px; /* Adjust the maximum height as needed */
+    overflow-y: auto;
+  }
+  
+  .image-options img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border: 6px solid ridge;
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .background-image-img {
+    display: none; /* Hide the default image when a new image is selected */
+  }
+  
+/*!***********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/side-bar-task-todo-category-showup-.css ***!
+  \***********************************************************************************************/
+/* Side Bar daily task and to task catergoy user input show up css styling */
+
+/* Daily Task input button */
+
+.inputBox {
+    /* display: none; */
+    position: absolute;
+    top: 40px;
+    display: flex;
+    visibility: collapse;
+}
+#userInput {
+    height: 40px;
+    /* font-size: 1.2rem; */
+}
+.inputBox > button {
+    font-size: 1.7rem;
+    background-color: gold;
+}
+.inputBox.un-hide {
+    visibility: visible;
+}
+
+
+/* Assignment Category user input Section */
+
+.inputBox1 {
+    position: absolute;
+    top: 40px;
+    display: flex;
+    visibility: collapse;
+}
+#userInput1 {
+    height: 40px;
+    /* font-size: 1.2rem; */
+}
+.inputBox1 > button {
+    font-size: 1.7rem;
+    background-color: gold;
+}
+.inputBox1.un-hide1 {
+    visibility: visible;
+}
