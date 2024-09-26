@@ -9,7 +9,60 @@
     <div class="container">
         <main>
             <div class="to-do-modals">
-                <h1>Nishanth</h1>
+
+                <form action="">
+                    <fieldset>
+                        <legend>To Do</legend>
+                        <div class="todo-name-field-section">
+                            <label for="todoinput">Task Name</label>
+                            <input type="text"  id="todoinput">
+                        </div>
+                        <div class="dates-for-to-do-section">
+                            <div class="due-date">
+                                <div class="todolabel">
+                                    <img src="icon/week-calendar-icon.png" alt="">
+                                    <label for="datepicker">Due Date</label>
+                                </div>
+                                <input type="text" name="" id="datepicker" placeholder="due-date">
+                            </div>
+                            <div class="frequency-of-todo">
+                                <div class="todolabel">
+                                    <img src="icon/repeatedtask.svg" alt="">
+                                    <label for="tddon">Recurrence</label>
+                                </div>
+                                <select name="to-do-daily-or-not" id="tddon">
+                                    <option value="daily">Daily</option>
+                                    <option value="one-time">One-Time</option>
+                                </select>
+                            </div>
+                            <div class="todo-priority-section">
+                                <div class="todolabel">
+                                    <img src="icon/priority.svg" alt="">
+                                    <label for="tdp">Priority</label>
+                                </div>
+                                <select name="todopriority" id="tdp">
+                                    <option value="1"> 🔴 Priority 1</option>
+                                    <option value="2"> 🟡 Priority 2</option>
+                                    <option value="3"> 🔵 Priority 3</option>
+                                    <option value="4"> 🟣 Priority 4</option>
+                                    <option value="5"> 🟢 Priority 5</option>
+                                </select>
+                            </div>
+                            <div class="todo-remindars">
+                                <div class="todolabel">
+                                    <img src="icon/reminder.svg" alt="">
+                                    <label for="todoremindars">Reminders:</label>
+                                </div>
+                                <input type="text" name="" id="reminderpicerfortodo" placeholder="Reminders">
+                            </div>
+                        </div>
+                        <div class="todo-action-buttons">
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                            <button type="button">Canel</button>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </main>
         <aside>

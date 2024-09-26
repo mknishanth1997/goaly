@@ -1,0 +1,165 @@
+.to-do-modals {
+    padding: 2rem;
+}
+
+
+
+
+
+
+.dates-for-to-do-section {
+    border: solid hotpink;
+}
+.dates-for-to-do-section input,select,option {
+    font-size: 2rem;
+    text-align: center;
+}
+/* To do task input section */
+.todo-name-field-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-name-field-section > input {
+    min-height: 2rem;
+    font-size: 2rem;
+    resize: vertical;
+    overflow: auto;
+    width:100%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+}
+
+.todo-name-field-section > input:focus {
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+/* Due Date Section */
+
+.due-date {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.due-date label {
+    font-size: 1.8rem;
+}
+.due-date img {
+    width: 50px;
+}
+
+.due-date > input, .todo-remindars > input, .frequency-of-todo > select, .todo-priority-section > select {
+    width:100%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+    background-color: transparent;
+}
+.due-date > input:focus, .todo-remindars > input:focus, .frequency-of-todo > select:focus {
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+.todo-priority-section > select  option:nth-child(1)
+{
+    background-color: red;
+}
+.todo-priority-section > select  option:nth-child(2)
+{
+    background-color: yellow;
+}
+.todo-priority-section > select  option:nth-child(3)
+{
+    background-color: blue;
+}
+.todo-priority-section > select  option:nth-child(4)
+{
+    background-color: violet;
+}
+.todo-priority-section > select  option:nth-child(5)
+{
+    background-color: greenyellow;
+}
+
+.todolabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.todolabel img {
+    width: 50px;
+}
+.todolabel label {
+    font-size: 1.8rem;
+}
+
+
+
+/* frequency-of-todo */
+
+.frequency-of-todo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* To Do Reminders */
+
+.todo-remindars {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+/* to-do-daily-or-not */
+
+.todo-priority-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+
+.dates-for-to-do-section {
+    display: flex;
+    /* border: solid; */
+    align-items: last baseline;
+    gap: 16px;
+    padding: 24px;
+}
+
+
+
+
+/* To do Action Button */
+
+.todo-action-buttons {
+    display: flex;
+    /* border: solid; */
+    justify-content: end;
+    gap: 24px;
+    padding: 16px;
+}
+
+.todo-action-buttons > button {
+    font-size: 2rem;
+    padding: 8px;
+    flex: 1;
+    border-radius: 8px;
+}
+
+
