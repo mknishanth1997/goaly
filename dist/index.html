@@ -8,7 +8,62 @@
 <body>
     <div class="container">
         <main>
-            <h1>Dude</h1>
+            <div class="to-do-modals">
+
+                <form action="">
+                    <fieldset>
+                        <legend>To Do</legend>
+                        <div class="todo-name-field-section">
+                            <label for="todoinput">Task Name</label>
+                            <input type="text"  id="todoinput">
+                        </div>
+                        <div class="dates-for-to-do-section">
+                            <div class="due-date">
+                                <div class="todolabel">
+                                    <img src="ab7dafc2b01637bf43a1.png" alt="">
+                                    <label for="datepicker">Due Date</label>
+                                </div>
+                                <input type="text" name="" id="datepicker" placeholder="due-date">
+                            </div>
+                            <div class="frequency-of-todo">
+                                <div class="todolabel">
+                                    <img src="f8d7d73b5972c6e394f6.svg" alt="">
+                                    <label for="tddon">Recurrence</label>
+                                </div>
+                                <select name="to-do-daily-or-not" id="tddon">
+                                    <option value="daily">Daily</option>
+                                    <option value="one-time">One-Time</option>
+                                </select>
+                            </div>
+                            <div class="todo-priority-section">
+                                <div class="todolabel">
+                                    <img src="4b365e53f706afa8526b.svg" alt="">
+                                    <label for="tdp">Priority</label>
+                                </div>
+                                <select name="todopriority" id="tdp">
+                                    <option value="1"> 🔴 Priority 1</option>
+                                    <option value="2"> 🟡 Priority 2</option>
+                                    <option value="3"> 🔵 Priority 3</option>
+                                    <option value="4"> 🟣 Priority 4</option>
+                                    <option value="5"> 🟢 Priority 5</option>
+                                </select>
+                            </div>
+                            <div class="todo-remindars">
+                                <div class="todolabel">
+                                    <img src="fee44fb8e24f4d57e5f7.svg" alt="">
+                                    <label for="todoremindars">Reminders:</label>
+                                </div>
+                                <input type="text" name="" id="reminderpicerfortodo" placeholder="Reminders">
+                            </div>
+                        </div>
+                        <div class="todo-action-buttons">
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                            <button type="button">Canel</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
         </main>
         <aside>
             <section class="logo-section-side-bar">
@@ -48,9 +103,6 @@
                         </div>
                     </div>
                     <div class="assignment-category">
-                        <p>Content-1</p>
-                        <p>Content-2</p>
-                        <p>Content-3</p>
                     </div>
                 </section> 
                 <section class="task-to-do-section">
@@ -63,9 +115,7 @@
                         </div>          
                     </div>
                     <div class="to-do-category">
-                        <p>to do 1</p>
-                        <p>to do 2</p>
-                        <p>to do 3</p>
+
                     </div>
                 </section>
             </div>
@@ -85,7 +135,9 @@
                 <button class="select-button">Theme</button>
             </div>
             
+            
         </aside>
     </div>
+
 </body>
 </html>

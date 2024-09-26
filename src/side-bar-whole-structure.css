@@ -5,7 +5,8 @@ aside {
     flex-direction: column;
     /* border: 10px solid black; */
     padding: 24px;
-    background-color: rgba(128, 128, 128, .2);
+    /* background-color: rgba(128, 128, 128, .2); */
+    background-color: brown;
 }
 
 aside * h1,h2,h3,h4,h5,h5,p {
