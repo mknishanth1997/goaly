@@ -8,14 +8,16 @@
 <body>
     <div class="container">
         <main>
-            <div class="to-do-modals">
+            <div class="to-do-modals ">
 
-                <form action="">
+                <form class="daily-taks-form" onsubmit="event.preventDefault()">
                     <fieldset>
+                        <input type="hidden" id="category" value="todo">
+                        <input type="hidden" id="index" value="">
                         <legend>To Do</legend>
                         <div class="todo-name-field-section">
                             <label class="tdfi" for="todoinput">Task Name</label>
-                            <input type="text"  id="todoinput">
+                            <input type="text" required id="todoinput">
                         </div>
                         <div class="dates-for-to-do-section">
                             <div class="due-date">
@@ -23,7 +25,7 @@
                                     <img src="icon/week-calendar-icon.png" alt="">
                                     <label for="datepicker">Due Date</label>
                                 </div>
-                                <input type="text" name="" id="datepicker" placeholder="due-date">
+                                <input  type="text" name="" id="datepicker" placeholder="due-date">
                             </div>
                             <div class="frequency-of-todo">
                                 <div class="todolabel">
@@ -32,7 +34,7 @@
                                 </div>
                                 <select name="to-do-daily-or-not" id="tddon">
                                     <option value="daily">Daily</option>
-                                    <option value="one-time">One-Time</option>
+                                    <option selected value="one-time">One-Time</option>
                                 </select>
                             </div>
                             <div class="todo-priority-section">
@@ -45,7 +47,7 @@
                                     <option value="2"> 🟡 Priority 2</option>
                                     <option value="3"> 🔵 Priority 3</option>
                                     <option value="4"> 🟣 Priority 4</option>
-                                    <option value="5"> 🟢 Priority 5</option>
+                                    <option selected value="5"> 🟢 Priority 5</option>
                                 </select>
                             </div>
                             <div class="todo-remindars">
@@ -57,9 +59,9 @@
                             </div>
                         </div>
                         <div class="todo-action-buttons">
-                            <button type="submit">Submit</button>
+                            <button class="submitbtnfortodoform" type="submit">Submit</button>
                             <button type="reset">Reset</button>
-                            <button type="button">Canel</button>
+                            <button type="button" class="cancelbtnfortodoform">Canel</button>
                         </div>
                     </fieldset>
                 </form>
@@ -87,31 +89,38 @@
                     <p>All my tasks</p>
                 </div>
                 <div class="tab-button">
-                    <button>T</button>
-                    <button>A</button>
-                    <button>B</button>
+                    <button class="pointer" >T</button>
+                    <button class="pointer" >A</button>
+                    <button class="pointer" >B</button>
                 </div>
             </section>
             <div class="to-do-whole-section">
                 <section class="assignment-section">
                     <div class="sticky">
                         <h2>Assignment</h2>
-                        <img src="icon/plus-icon-1.svg" alt="Plus Icon" class="ct-1" >
+                        <img src="icon/plus-icon-1.svg" alt="Plus Icon" class="ct-1 pointer" >
                         <div class="inputBox1">
                             <input type="text" id="userInput1" placeholder="Type something...">
-                            <button class="tasks-add-section">+</button> 
+                            <button class="tasks-add-section pointer">+</button> 
                         </div>
                     </div>
                     <div class="assignment-category">
+                        <!-- <div>
+                            <p>Nishanth</p>
+                            <div>
+                                <img src="icon/plus-icon-1.svg" alt="">
+                                <img src="icon/plus-icon-1.svg" alt="">
+                            </div>
+                        </div> -->
                     </div>
                 </section> 
                 <section class="task-to-do-section">
                     <div class="sticky">
                         <h2>Daily Tasks</h2>
-                        <img class="showInputBtn ct-2" src="icon/plus-icon-1.svg" alt="Plus Icon" >
+                        <img class="showInputBtn ct-2 pointer" src="icon/plus-icon-1.svg" alt="Plus Icon" >
                         <div class="inputBox">
                             <input type="text" id="userInput" placeholder="Type something...">
-                            <button class="to-do-add-section">+</button>
+                            <button class="to-do-add-section pointer">+</button>
                         </div>          
                     </div>
                     <div class="to-do-category">

@@ -116,16 +116,43 @@ aside * h1,h2,h3,h4,h5,h5,p {
     font-size: 1.5rem;
 }
 
-.assignment-category > p::before, .to-do-category > p::before {
+.assignment-category  p::before, .to-do-category  p::before {
     content: "📝 ";
 }
 
-.assignment-category > p, .to-do-category > p
+.assignment-category  p, .to-do-category > p
 {
-    cursor: pointer;
     white-space: nowrap;
     overflow: hidden;
     text-overflow:ellipsis;
 }
 
 
+
+.assignment-category > div, .to-do-category > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-size: 1.5rem;
+} 
+
+.assignment-category > div > div, .to-do-category > div > div {
+    display: flex;
+    gap: 8px;
+
+}
+.assignment-category > div  img, .to-do-category > div  img {
+    width: 30px;
+}
+
+
+.assignment-category, .to-do-category {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pointer {
+    cursor: pointer;
+}

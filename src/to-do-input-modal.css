@@ -1,5 +1,8 @@
 .to-do-modals {
     padding: 2rem;
+    display: none;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .tdfi {
     font-size: 2rem;
@@ -228,15 +231,16 @@
 }
 
 .to-do-modals > form {
-    background-color: #ececec;
+    background-color: transparent;
     box-shadow:
 0 1px 1px hsl(0deg 0% 0% / 0.075),
 0 2px 2px hsl(0deg 0% 0% / 0.075),
 0 4px 4px hsl(0deg 0% 0% / 0.075),
 0 8px 8px hsl(0deg 0% 0% / 0.075),
 0 16px 16px hsl(0deg 0% 0% / 0.075);
-
+border-radius: 16px;
 }
+legend {}
 input {
     border-radius: 5px;
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
@@ -246,6 +250,11 @@ input {
     background-color: gray;
 }
   
-.to-do-modals {
-    /* display: none; */
+.to-do-modals.show {
+    display: block;
+    /* display: block; */
+    opacity: 1;
+    transform: scale(1);
 }
+
+
