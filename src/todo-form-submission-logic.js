@@ -43,7 +43,7 @@ const datePicker = Flatpickr('#datepicker', {
     const recurence = document.querySelector("#tddon").value;
     const priority = document.querySelector("#tdp").value;
     const reminder = document.querySelector("#reminderpicerfortodo").value;
-
+    console.log(reminder);
     let dueDatepicker1,reminder1;
     if(dueDatepicker === "")
     {
@@ -54,23 +54,33 @@ const datePicker = Flatpickr('#datepicker', {
         dueDatepicker1 = dueDatepicker;
     }
     
-    if(reminder === "" || reminder === undefined)
+    if(reminder === "")
     {
-        reminder1 === "empty";
+        reminder1 = "empty";
     }
     else
     {
         reminder1 = reminder;
     }
-    
-    console.log(headObj.toDoCategory[index]);
-   const createdObj =  createToDoDescriptiveObject(cat,headObj.toDoCategory[index],
-        todoinputTaskName,
-        dueDatepicker1,
-        recurence,
-        priority,
-        reminder1
-    );
+
+    let createdObj;
+
+    if(todoinputTaskName !== "")
+    {
+        createdObj =  createToDoDescriptiveObject(cat,headObj.toDoCategory[index],
+            todoinputTaskName,
+            dueDatepicker1,
+            recurence,
+            priority,
+            reminder1
+        );
+
+        headObj.toDoCategoryFullDeails.push(createdObj);
+        console.log(headObj.toDoCategoryFullDeails);
+        form.reset();
+        const toDoModals = document.querySelector(".to-do-modals");
+        toDoModals.classList.toggle("show");
+    }
 
     console.log(createdObj);
 }
@@ -81,7 +91,7 @@ export function addEventListenertoTheActionButtons()
 {
     const submit = document.querySelector(".submitbtnfortodoform");
     const cancel = document.querySelector(".cancelbtnfortodoform");
-    const toDoModals = document.querySelector(".to-do-modals");
+    
     const form = document.querySelector(".daily-taks-form");
 
      
@@ -89,7 +99,7 @@ export function addEventListenertoTheActionButtons()
     cancel.addEventListener("click", () => 
     {
         form.reset();
-        toDoModals.classList.toggle("show");
+        
     });
     recurenceChanger();
 }
@@ -120,6 +130,8 @@ function createToDoDescriptiveObject(category, categoryName,taskName, dueDate, r
         dueDate,
         recurence,
         priority,
-        reminder
+        reminder,
+        completedStatus: "not-completed",
+        
     }
 }

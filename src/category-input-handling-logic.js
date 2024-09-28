@@ -6,6 +6,8 @@ import { headObj } from "./index.js";
 import { assignmentInputBox } from "./category-handle-sidebar.js";
 import { toDoInputBox } from "./category-handle-sidebar.js";
 import { addEventListnertoPlusSymbolTodo } from './todo-modal-showup-logic.js';
+import { renderedOrNot } from "./flat.js";
+import {createToDoOuterStrcuture} from "./tododisplayrender.js";
 // Assignment: 
 const assignmentPlusSymbolForInput = document.querySelector(".tasks-add-section");
 const assignmentInput = document.querySelector("#userInput1");
@@ -120,5 +122,6 @@ function upDateToDoCategoryDom()
     div.appendChild(div1);
     toDoCategory.appendChild(div);
     addEventListnertoPlusSymbolTodo(img, category, index);
+    let isRendered = renderedOrNot();
+    p.addEventListener("click", () => createToDoOuterStrcuture(p.textContent, isRendered));    
 }
-

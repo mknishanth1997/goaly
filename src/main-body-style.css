@@ -12,6 +12,7 @@ aside {
 main {
     grid-area: main;
     padding: 16px;
+    background-color: #F1CFFC;
 }
 
 .container {

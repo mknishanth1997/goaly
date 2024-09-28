@@ -15,6 +15,7 @@ aside {
 main {
     grid-area: main;
     padding: 16px;
+    background-color: #F1CFFC;
 }
 
 .container {
@@ -557,6 +558,159 @@ input {
 
 
 
+/*!*************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/to-do-display.css ***!
+  \*************************************************************************/
+/* Css for the main screen to dispaly the to list */
+:root {
+	--shadow-color: 286deg 36% 56%;
+	--shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+		0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+		1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+	--shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+		0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+		2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+		5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+	--shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+		1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+		2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+		4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+		7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+		11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+		17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+		25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+	--bg: #f1cffc;
+	--box: #fff;
+	--details: #af7eeb;
+}
+
+
+.display-content{
+    /* width: 800px; */
+	/* height: 400px; */
+	background: var(--box);
+	/* padding: 10px 30px; */
+	border-radius: 20px;
+	box-shadow: var(--shadow-elevation-high);
+    
+}
+
+.display-content > div:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    gap: 16px;
+    background-color: var(--details);
+    box-shadow: var(--shadow-elevation-medium);
+    border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+    padding: 16px;
+}
+
+.contents-to-do
+{
+    padding: 10px 30px;
+}
+
+.todocontents, .todocontents > div {
+    display: flex;
+}
+.todocontents {
+    border: solid;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: 21px;
+}
+
+.todocontents > div:nth-child(2)  {
+    gap: 16px;
+}
+
+
+/* table */
+.to-do-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    background-color: #f3f1f1; /* Table background */
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    overflow: hidden; /* Hide overflow of rounded corners */
+}
+
+.to-do-table th, .to-do-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+    color: #333;
+}
+
+.to-do-table th {
+    background-color: #d3b1e6; /* Light purple header background */
+    color: #333;
+    text-align: center;
+}
+
+.to-do-table td {
+    background-color: #fff;
+}
+
+.to-do-table tr:hover {
+    background-color: #eee;
+}
+
+.action-icons img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.7; /* Semi-transparent for inactive icons */
+}
+
+.action-icons img:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+h1 {
+    text-align: center;
+    color: #4b0082; /* Deep purple */
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+}
+
+h1::before {
+    content: "\f0ca"; /* Font Awesome list icon */
+    font-family: 'FontAwesome';
+    padding-right: 10px;
+}
+
+.to-do-title {
+    background-color: #cfa1e6; /* Purple background for header */
+    color: #333;
+    border-radius: 8px 8px 0 0;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.to-do-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
+    padding: 50px;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: red;
+}
 /*!*************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/flatpickr/dist/flatpickr.min.css ***!
   \*************************************************************************************************/
