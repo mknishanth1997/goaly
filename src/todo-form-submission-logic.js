@@ -43,6 +43,7 @@ const datePicker = Flatpickr('#datepicker', {
     const recurence = document.querySelector("#tddon").value;
     const priority = document.querySelector("#tdp").value;
     const reminder = document.querySelector("#reminderpicerfortodo").value;
+
     console.log(reminder);
     let dueDatepicker1,reminder1;
     if(dueDatepicker === "")
@@ -82,8 +83,27 @@ const datePicker = Flatpickr('#datepicker', {
         toDoModals.classList.toggle("show");
     }
 
+    let initialData = createdObj;
+
     console.log(createdObj);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

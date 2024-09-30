@@ -114,6 +114,7 @@ export function createToDoOuterStrcuture(category,isRendered)
         td2.textContent = obj.dueDate;
         td3.textContent = obj.reminder;
         td4.textContent = obj.priority;
+        tickimg.addEventListener("click", () => tickimgAdd(tickimg, obj, tr));
         td5.appendChild(tickimg);
         td5.appendChild(editImg);
         td5.appendChild(deleteImg);
@@ -123,6 +124,18 @@ export function createToDoOuterStrcuture(category,isRendered)
         tr.appendChild(td4);
         tr.appendChild(td5);
         tbody.appendChild(tr);
+        
+        if(obj.completedStatus === "completed")
+        {          
+          tr.classList.add("completed");
+        }
+        else if(obj.completedStatus === "not-completed")
+        {
+          if(tr.classList === "completed")
+          {
+            tr.classList.remove("completed");
+          }
+        }
       }
     });
     console.log(headObj.toDoCategoryFullDeails);
@@ -130,9 +143,23 @@ export function createToDoOuterStrcuture(category,isRendered)
   }
 
 
+//  Action Button Triggers
 
 
 
+function tickimgAdd(tickimg, obj, tr)
+{
+  if(obj.completedStatus === "completed")
+  {
+    tr.classList.remove("completed");
+    obj.completedStatus = "not-completed";
+  }
+  else if(obj.completedStatus === "not-completed")
+  {
+    tr.classList.add("completed")
+    obj.completedStatus = "completed";
+  }
+}
 
 
   
