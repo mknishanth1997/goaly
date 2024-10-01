@@ -32,6 +32,8 @@ export function addEventListnertoPlusSymbolTodo(img, category, index)
     });
     
 }
-    
+   
+
+
     
     

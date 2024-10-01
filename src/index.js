@@ -30,10 +30,10 @@ export const headObj =
 {
     nameofObj : "head object",
     toDoCategory: [],
-    toDoCategoryFullDeails: [a],
+    toDoCategoryFullDeails: [],
     assignmentCategory: [],
 
 }
 
-console.log(headObj.toDoCategoryFullDeails[0]);
+
 

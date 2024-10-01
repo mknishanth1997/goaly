@@ -5,7 +5,7 @@ import tickimgpath from "./icon/checkpurple.svg";
 import editimgpath from "./icon/editpurple.svg";
 import deleteimgpath from "./icon/deletered.svg";
 import headiconimgpath from "./icon/list-of-tasks.svg";
-
+import { removeEventListenersFromActionButtons } from "./todo-form-submission-logic";
 
 export function createToDoOuterStrcuture(category,isRendered)
 {
@@ -77,6 +77,7 @@ export function createToDoOuterStrcuture(category,isRendered)
     a.appendChild(bossDiv);
 
     renderTheContents(tbody, category);
+    return bossDiv;
   }
   else 
   {
@@ -116,7 +117,13 @@ export function createToDoOuterStrcuture(category,isRendered)
         td4.textContent = obj.priority;
         tickimg.addEventListener("click", () => tickimgAdd(tickimg, obj, tr));
         td5.appendChild(tickimg);
+        editImg.addEventListener("click", () => editImgAdd(obj, editImg));
         td5.appendChild(editImg);
+        deleteImg.addEventListener("click", () => 
+        {
+          headObj.toDoCategoryFullDeails = headObj.toDoCategoryFullDeails.filter(task => task !== obj);
+          tr.remove();
+        });
         td5.appendChild(deleteImg);
         tr.appendChild(td1);
         tr.appendChild(td2);
@@ -160,6 +167,52 @@ function tickimgAdd(tickimg, obj, tr)
     obj.completedStatus = "completed";
   }
 }
+
+function editImgAdd(obj, editImg) {
+  const toDoModals = document.querySelector(".to-do-modals");
+  const form = document.querySelector(".daily-taks-form");
+  form.reset();
+  
+  const cat = document.querySelector("#category");
+  const index = document.querySelector("#index");
+  const submit = document.querySelector(".submitbtnfortodoform");
+  const todoinputTaskName = document.querySelector("#todoinput");
+  const dueDatepicker = document.querySelector("#datepicker");
+  const recurence = document.querySelector("#tddon");
+  const priority = document.querySelector("#tdp");
+  const reminder = document.querySelector("#reminderpicerfortodo");
+  
+  // Show the modal
+  toDoModals.classList.toggle("show");
+
+  // Fill form with object values
+  todoinputTaskName.value = obj.taskName;
+  if (obj.dueDate === "empty") {
+      dueDatepicker.value = ""; 
+  } else {
+      dueDatepicker.value = obj.dueDate;
+  }
+  recurence.value = obj.recurence;
+  priority.value = obj.priority;
+  reminder.value = obj.reminder;
+
+  // Remove previous event listeners from buttons
+  removeEventListenersFromActionButtons();
+
+  // Add a new event listener that runs only once
+  submit.addEventListener("click", () => {
+      // Correctly update object properties
+      obj.taskName = todoinputTaskName.value;
+      obj.dueDate = dueDatepicker.value;   // Corrected the dueDate field
+      obj.recurence = recurence.value;
+      obj.priority = priority.value;
+      obj.reminder = reminder.value;
+      
+      // Close the modal
+      toDoModals.classList.toggle("show");
+  }, { once: true });
+}
+
 
 
   

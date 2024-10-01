@@ -83,9 +83,6 @@ const datePicker = Flatpickr('#datepicker', {
         toDoModals.classList.toggle("show");
     }
 
-    let initialData = createdObj;
-
-    console.log(createdObj);
 }
 
 
@@ -104,25 +101,41 @@ const datePicker = Flatpickr('#datepicker', {
 
 
 
+let eventListenersAdded = false;
 
 
+// Named function to handle the cancel button behavior
+function handleCancel() {
+    const form = document.querySelector(".daily-taks-form");
+    const toDoModals = document.querySelector(".to-do-modals");
 
-export function addEventListenertoTheActionButtons()
-{
+    form.reset();
+    toDoModals.classList.toggle("show");
+}
+
+export function addEventListenertoTheActionButtons() {
+    if (eventListenersAdded) {
+        return; // Function has already been called
+    }
+
     const submit = document.querySelector(".submitbtnfortodoform");
     const cancel = document.querySelector(".cancelbtnfortodoform");
-    
-    const form = document.querySelector(".daily-taks-form");
 
-     
     submit.addEventListener("click", submitTodoFormData);
-    cancel.addEventListener("click", () => 
-    {
-        form.reset();
-        
-    });
-    recurenceChanger();
+    cancel.addEventListener("click", handleCancel); // Use named function here
+    recurenceChanger(); // Assuming this is an existing function
 }
+
+export function removeEventListenersFromActionButtons() {
+    const submit = document.querySelector(".submitbtnfortodoform");
+    const cancel = document.querySelector(".cancelbtnfortodoform");
+
+    submit.removeEventListener("click", submitTodoFormData);
+    cancel.removeEventListener("click", handleCancel); // Use the same named function to remove
+
+    console.log("Event listeners removed");
+}
+
 
 function recurenceChanger()
 {

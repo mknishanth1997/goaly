@@ -123,5 +123,29 @@ function upDateToDoCategoryDom()
     toDoCategory.appendChild(div);
     addEventListnertoPlusSymbolTodo(img, category, index);
     let isRendered = renderedOrNot();
-    p.addEventListener("click", () => createToDoOuterStrcuture(p.textContent, isRendered));    
+    let currentCategoryElement = null;
+    p.addEventListener("click", () => 
+        {
+            const element = createToDoOuterStrcuture(p.textContent, isRendered);
+            if (element) {
+                currentCategoryElement = element; // Store the reference
+            }
+        });   
+    img1.addEventListener("click", () => {
+        headObj.toDoCategoryFullDeails = headObj.toDoCategoryFullDeails.filter(obj => {
+            return obj.categoryName !== p.textContent;
+        });
+        headObj.toDoCategory = headObj.toDoCategory.filter(element => {
+            return element !== p.textContent;
+        });
+        div.remove();
+        if (currentCategoryElement) {
+            currentCategoryElement.remove(); // This will remove the element from the DOM
+            currentCategoryElement = null; // Optionally clear the reference
+        }
+        
+
+        console.log("Updated headObj:", headObj.toDoCategoryFullDeails, headObj.toDoCategory);
+    });
+    
 }
